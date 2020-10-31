@@ -8,16 +8,16 @@ public class ConverterTest {
     @Test
     public void whenConvert140RblThen2Euro() {
         int in  = 140;
-        int expected = 2;
-        int out = Converter.rubleToEuro(in);
-        Assert.assertEquals(expected, out);
+        float expected = 2;
+        float out = Converter.rubleToEuro(in);
+        Assert.assertEquals(expected, out, 0.1);
     }
 
     @Test
-    public void whenConverter180RblThen2Dollar() {
-        int in = 180;
-        int expected = 1;
-        int out = Converter.rubleToDollar(in);
-        Assert.assertEquals(expected, out);
+    public void whenConverter140RblThen2Dollar() {
+        int in = 140;
+        float expected = 2.33F;
+        float out = Converter.rubleToDollar(in);
+        Assert.assertEquals(expected, out, 0.1);
         }
 }
