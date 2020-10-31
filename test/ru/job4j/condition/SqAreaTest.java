@@ -26,7 +26,7 @@ public class SqAreaTest {
     }
 
     @Test
-    public void whenP135K45squareThen677() {
+    public void whenP1350K45squareThen677() {
         float p = 13.5F;
         float k = 4.5F;
         double expected = 6.77;
