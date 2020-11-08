@@ -8,7 +8,7 @@ import static org.junit.Assert.*;
 public class FactorialTest {
 
     @Test
-    public void whenCalculateFactorialForFiveThenOneHundreedTwenty() {
+    public void whenCalculateFactorialForFiveThenOneHundredTwenty() {
         Assert.assertEquals((Factorial.calc(5)), 120);
     }
 
