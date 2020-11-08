@@ -8,12 +8,12 @@ import static org.junit.Assert.*;
 public class FactorialTest {
 
     @Test
-    public void when10calc() {
-        Assert.assertEquals((Factorial.calc(10)), 3628800);
+    public void whenCalculateFactorialForFiveThenOneHundreedTwenty() {
+        Assert.assertEquals((Factorial.calc(5)), 120);
     }
 
     @Test
-    public void when9calc() {
-        Assert.assertEquals((Factorial.calc(9)), 362880);
+    public void when1calc() {
+        Assert.assertEquals((Factorial.calc(1)), 1);
     }
 }
