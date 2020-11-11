@@ -1,12 +1,10 @@
 package ru.job4j.calculator;
 
 public class Training {
-    public static void main(String[]args){
+    public static void main(String[]args) {
         int size = 10;
         size = size + 90;
         size = size - 5;
         System.out.println(size);
-
-
     }
 }
