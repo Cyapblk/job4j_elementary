@@ -22,14 +22,4 @@ public class SwitchArrayTest {
         int[] rsl = SwitchArray.swap(input, 6, 8);
         assertThat(rsl, is(expect));
     }
-
-
-
-
-
-
-
-
-
-
 }
