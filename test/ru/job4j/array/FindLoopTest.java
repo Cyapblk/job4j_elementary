@@ -8,28 +8,35 @@ import static org.junit.Assert.*;
 public class FindLoopTest {
 
     @Test
-    public void whenArrayHas5Then0() {
-        int[] input = {5, 4, 3, 2};
-        int value = 3;
-        int expect = 2;
-        int result = FindLoop.index0f(input, value);
+    public void whenFind3() {
+        int[] input = {5, 2, 10, 2, 4};
+        int value = 2;
+        int start = 2;
+        int finish = 4;
+        int expect = 3;
+        int result = FindLoop.index0f(input, value, start, finish);
         assertThat(result, is(expect));
     }
 
     @Test
-    public void whenArrayHas10Then4() {
-        int[] input = {3, 7, 3, 2, 10, 7, 100500, 7, 8};
-        int value = 10;
-        int result = FindLoop.index0f(input, value);
-        assertThat(result, is(4));
+    public void whenFind4() {
+        int[] input = {5, 2, 10, 2, 4};
+        int value = 4;
+        int start = 1;
+        int finish = 4;
+        int expect = 4;
+        int result = FindLoop.index0f(input, value, start, finish);
+        assertThat(result, is(expect));
     }
 
     @Test
-    public void whenArrayNo13ThenFail() {
-        int[] input = {3, 7, 3, 2, 10, 7, 100500, 7, 8};
-        int value = 13;
+    public void whenNotFind4() {
+        int[] input = {5, 2, 10, 2, 4};
+        int value = 4;
+        int start = 1;
+        int finish = 3;
         int expect = -1;
-        int result = FindLoop.index0f(input, value);
+        int result = FindLoop.index0f(input, value, start, finish);
         assertThat(result, is(expect));
     }
 }
