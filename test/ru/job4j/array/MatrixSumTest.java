@@ -22,7 +22,8 @@ public class MatrixSumTest {
         int[][] input = {
                 {-777, -1, -2},
                 {-3, -4, 4},
-                {3, 3, 777}
+                {3, 3, 777},
+                {0, 0, 0, 0}
         };
         Assert.assertEquals(MatrixSum.sum(input), 0);
     }
