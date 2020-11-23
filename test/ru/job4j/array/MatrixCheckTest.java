@@ -37,4 +37,52 @@ public class MatrixCheckTest {
         char[] expect = {'W', 'O', 'W'};
         assertThat(MatrixCheck.extractDiagonal(input), is(expect));
     }
+
+    @Test
+    public void whenWin1() {
+        char[][] input = {
+                {' ', ' ', ' ', ' ', ' '},
+                {' ', ' ', ' ', ' ', ' '},
+                {'X', 'X', 'X', 'X', 'X'},
+                {' ', ' ', 'X', ' ', ' '},
+                {' ', ' ', 'X', ' ', ' '},
+        };
+        assertTrue(MatrixCheck.isWin(input));
+    }
+
+    @Test
+    public void whenFail1() {
+        char[][] input = {
+                {' ', ' ', 'X', ' ', ' '},
+                {' ', ' ', 'X', ' ', ' '},
+                {' ', 'X', ' ', ' ', ' '},
+                {' ', ' ', 'X', ' ', ' '},
+                {' ', ' ', 'X', ' ', ' '},
+        };
+        assertFalse(MatrixCheck.isWin(input));
+    }
+
+    @Test
+    public void whenWin2() {
+        char[][] input = {
+                {' ', ' ', 'X', ' ', 'X'},
+                {' ', ' ', 'X', ' ', 'X'},
+                {' ', 'X', ' ', ' ', 'X'},
+                {' ', ' ', 'X', ' ', 'X'},
+                {'X', ' ', 'X', 'X', 'X'},
+        };
+        assertTrue(MatrixCheck.isWin(input));
+    }
+
+    @Test
+    public void whenWin3() {
+        char[][] input = {
+                {' ', ' ', 'X', ' ', 'X'},
+                {' ', ' ', 'X', ' ', '$'},
+                {' ', 'X', ' ', ' ', 'X'},
+                {' ', ' ', 'X', ' ', 'X'},
+                {'X', 'X', 'X', 'X', 'X'},
+        };
+        assertTrue(MatrixCheck.isWin(input));
+    }
 }
