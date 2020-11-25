@@ -1,22 +1,23 @@
 package ru.job4j.array;
 
 public class Machine {
-    public static int[] rest(int money, int price) {
-        int[] coins = {10, 5, 2, 1};
+    public static int[] rest(int[] coins, int money, int price) {
         int[] result = new int[12];
         int rest = money - price;
-        for (int resultindex = 0; resultindex < 3; resultindex++) {
-            for (int coinsindex = 0; coinsindex <= 3; coinsindex++) {
-            while (rest >= coins[coinsindex]) {
-                    result[resultindex] = coins[coinsindex];
-                    rest = rest - coins[coinsindex];
-                    resultindex++;
-                    if (rest < coins[coinsindex]) {
-                        break;
-                    }
+        int item = 0;
+        for (int index = 0; index <= 3; index++) {
+            while (rest >= coins[index]) {
+                result[item] = coins[index];
+                rest = rest - coins[index];
+                item++;
+                if (rest < coins[index]) {
+                    break;
                 }
             }
         }
-        return result;
+        int[] cut = new int[item];
+        for (int i = 0; i < item; i++) {
+            cut[i] = result[i]; }
+        return cut;
     }
 }
