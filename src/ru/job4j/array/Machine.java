@@ -5,7 +5,7 @@ public class Machine {
         int[] result = new int[12];
         int rest = money - price;
         int item = 0;
-        for (int index = 0; index <= 3; index++) {
+        for (int index = 0; index < coins.length; index++) {
             while (rest >= coins[index]) {
                 result[item] = coins[index];
                 rest = rest - coins[index];
