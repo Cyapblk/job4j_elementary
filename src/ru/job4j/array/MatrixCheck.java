@@ -25,17 +25,17 @@ public class MatrixCheck {
 
     public static char[] extractDiagonal(char[][] board) {
         char[] rsl = new char[board.length];
-        for (int rowcell = 0; rowcell < board.length; rowcell++) {
-            rsl[rowcell] = board[rowcell][rowcell];
+        for (int diagonal = 0; diagonal < board.length; diagonal++) {
+            rsl[diagonal] = board[diagonal][diagonal];
         }
         return rsl;
     }
 
     public static boolean isWin(char[][] board) {
         boolean result = false;
-        for (int rowcell = 0; rowcell < board.length; rowcell++) {
-            if (board[rowcell][rowcell] == 'X') {
-                if (((monoVertical(board, rowcell))) || ((monoHorizontal(board, rowcell)))) {
+        for (int diagonal = 0; diagonal < board.length; diagonal++) {
+            if (board[diagonal][diagonal] == 'X') {
+                if (((monoVertical(board, diagonal))) || ((monoHorizontal(board, diagonal)))) {
                 result = true;
                 break;
                 }
