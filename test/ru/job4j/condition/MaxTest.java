@@ -33,6 +33,16 @@ public class MaxTest {
         int out = Max.max(left, right);
         Assert.assertEquals(exp, out);
     }
+
+    @Test
+    public void maxQuard() {
+        Assert.assertEquals(8, Max.max(1, 2, 6, 8));
+    }
+
+    @Test
+    public void maxTriple() {
+        Assert.assertEquals(7, Max.max(7, 2, 0));
+    }
 }
 
 
