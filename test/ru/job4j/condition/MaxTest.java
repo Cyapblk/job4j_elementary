@@ -8,40 +8,13 @@ import static org.junit.Assert.*;
 public class MaxTest {
 
     @Test
-    public void when12maxThen() {
-        int left = 1;
-        int right = 2;
-        int exp = 2;
-        int out = Max.max(left, right);
-        Assert.assertEquals(exp, out);
-    }
-
-    @Test
-    public void when63maxThen() {
-        int left = 6;
-        int right = 3;
-        int exp = 6;
-        int out = Max.max(left, right);
-        Assert.assertEquals(exp, out);
-    }
-
-    @Test
-    public void when77maxThen() {
-        int left = 7;
-        int right = 7;
-        int exp = 7;
-        int out = Max.max(left, right);
-        Assert.assertEquals(exp, out);
-    }
-
-    @Test
-    public void maxQuard() {
-        Assert.assertEquals(8, Max.max(1, 2, 6, 8));
-    }
-
-    @Test
     public void maxTriple() {
         Assert.assertEquals(7, Max.max(7, 2, 0));
+    }
+
+    @Test
+    public void maxQuad() {
+        Assert.assertEquals(9, Max.max(7, 3, 4, 9));
     }
 }
 
